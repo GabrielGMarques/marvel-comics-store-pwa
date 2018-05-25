@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#2F3BA2">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" href="/assets/fontawesome-styles/fontawesome-all.css">
+    <script src="/scripts/libs/crypto-js/crypto-js.js"></script>
+    <script src="/scripts/service.js"></script>
+    <script src="/scripts/app.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>Marvel Store</title>
+</head>
+
+<body>
+    <header class="header">
+        <a onclick="onDrawerMenuClick()" id="menu-bar">
+            <i class="fas fa-bars"></i>
+        </a>
+        <h1 class="header_title">Marvel Store</h1>
+        <a id="btn-notification-push" onclick="notifyAll();" title="push notifications">
+            <i class="far fa-hand-point-up"></i>
+        </a>
+        <a id="btn-notification" onclick="onClickNotificationBtn();">
+            <i class="fas" id="icon-notification"></i>
+        </a>
+    </header>
+    <section id="drawer-menu">
+        <div class="drawer-header">
+            <a onclick="onDrawerMenuClick()" id="menu-bar">
+                <i class="fas fa-bars"></i>
+            </a>
+            Menu
+        </div>
+        <div class="drawer-content">
+            <div class="option-list">
+                <div class="option-list-item" onclick="onSelectOption('characters-content')">Characters</div>
+                <div class="option-list-item" onclick="onSelectOption('comics-content')">Comics</div>
+                <div class="option-list-item" onclick="onSelectOption('series-content')">Series</div>
+            </div>
+        </div>
+    </section>
+    <section class="marvel-content">
+        <section id="characters-content">
+            <h1>Characters</h1>
+            <div id="characters-list">
+            </div>
+        </section>
+        <section id="comics-content" style="display: none;">
+            <h1>Commics</h1>
+            <div id="comics-list">
+            </div>
+        </section>
+        <section id="series-content" style="display: none;">
+            <h1>Series</h1>
+            <div id="series-list">
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
